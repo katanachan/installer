@@ -16,7 +16,7 @@ tar -xvjf TTFQuery-1.0.5.tar.gz
 cd TTFQuery-1.0.5/
 python setup.py build && python setup.py install
 
-pip install fonttools
+sudo pip install fonttools
 
 wget https://pypi.python.org/packages/73/9e/fe761e03de28b51b445ddf01ddae87441b7e7040df7d830b86db8f945808/Polygon2-2.0.8.tar.gz#md5=3349a6dfc4cda2a1bcc9bf6c9d411470
 tar -xvjf Polygon2-2.0.8.tar.gz
