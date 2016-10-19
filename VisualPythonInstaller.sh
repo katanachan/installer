@@ -18,7 +18,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.virtualenvs/workspace/lib
 cd wxPython
 CFLAGS=-Wno-error=format-security CPPFLAGS=-Wno-error=format-security python setup.py build
 CFLAGS=-Wno-error=format-security CPPFLAGS=-Wno-error=format-security sudo python setup.py install
-cd ..
+cd ../..
 
 wget https://pypi.python.org/packages/dd/69/a6d5ba016f4e15a83e49471bcf91a7b8fbdf818e5acb002f554027d47650/TTFQuery-1.0.5.tar.gz
 tar -xvjf TTFQuery-1.0.5.tar.gz
