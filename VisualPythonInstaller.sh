@@ -13,18 +13,19 @@ tar -xvjf wxPython-src-3.0.2.0.tar.bz2
 mkvirtualenv workspace	
 workon workspace
 cd wxPython-src-3.0.2.0/
-./configure –prefix=~/.virtualenvs/workspace –with-gtk2 –enable-unicode –with-opengl
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.virtualenvs/workspace/lib
+./configure --prefix=/home/$SUDO_USER/.virtualenvs/workspace/lib/ --with-gtk2 --enable-unicode --with-opengl
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/$SUDO_USER/.virtualenvs/workspace/lib
 cd wxPython
-CFLAGS=-Wno-error=format-security CPPFLAGS=-Wno-error=format-security python setup.py build
 CFLAGS=-Wno-error=format-security CPPFLAGS=-Wno-error=format-security sudo python setup.py install
+python setup.py build
 cd ../..
+deactivate
 
 wget https://pypi.python.org/packages/dd/69/a6d5ba016f4e15a83e49471bcf91a7b8fbdf818e5acb002f554027d47650/TTFQuery-1.0.5.tar.gz
 tar -xvjf TTFQuery-1.0.5.tar.gz
 cd TTFQuery-1.0.5/
 python setup.py build && sudo python setup.py install
-cd..
+cd ..
 
 sudo pip install fonttools
  
