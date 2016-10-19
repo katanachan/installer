@@ -1,3 +1,11 @@
+#!/bin/bash -
+#title       : vpythonlinuxinstall.sh
+#description : A shell script to install VPython on Linux 
+#author      : Aishwarya Unnikrishnan (katanachan)
+#email id    : shwarya.unnikrishnan@gmail.com
+#usage       : bash vpythonlinuxinstall.sh or ./vpythonlinuxinstall.sh
+#=====================================================================   
+
 sudo apt-get install libwxgtk3.0-dev
 sudo apt-get install virtualenv
 wget http://downloads.sourceforge.net/wxpython/wxPython-src-3.0.2.0.tar.bz2
@@ -10,18 +18,19 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.virtualenvs/workspace/lib
 cd wxPython
 python setup.py build
 CFLAGS=-Wno-error=format-security CPPFLAGS=-Wno-error=format-security sudo python setup.py install
-
+cd ..
 wget https://pypi.python.org/packages/dd/69/a6d5ba016f4e15a83e49471bcf91a7b8fbdf818e5acb002f554027d47650/TTFQuery-1.0.5.tar.gz
 tar -xvjf TTFQuery-1.0.5.tar.gz
 cd TTFQuery-1.0.5/
 python setup.py build && python setup.py install
-
+cd ..
 sudo pip install fonttools
-
+ 
 wget https://pypi.python.org/packages/73/9e/fe761e03de28b51b445ddf01ddae87441b7e7040df7d830b86db8f945808/Polygon2-2.0.8.tar.gz#md5=3349a6dfc4cda2a1bcc9bf6c9d411470
 tar -xvjf Polygon2-2.0.8.tar.gz
 cd Polygon2-2.0.8/
 python setup.py build && python setup.py install
+cd ..
 
 sudo apt-get update
 sudo apt-get install git
