@@ -12,7 +12,6 @@ cd ~/
 #=== SHELL SCRIPT TO FETCH VIA APT-GET =====
 sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu xenial main restricted universe"
 sudo apt-get update
-sudo apt-get install  
 sudo apt-get install python-wxgtk3.0 python wxgtk3.0-dev
 sudo add-apt-repository --remove "deb http://archive.ubuntu.com/ubuntu xenial main restricted universe"
 
