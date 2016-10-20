@@ -32,6 +32,7 @@ sudo add-apt-repository --remove "deb http://archive.ubuntu.com/ubuntu xenial ma
 #echo "export PYTHONPATH="$PWD"" >> ~/.bashrc
 #CFLAGS=-Wno-error=format-security CPPFLAGS=-Wno-error=format-security sudo python setup.py install ###  Use this if you wish to use setup.py 
 #python setup.py build
+#deactivate
 
 
 # ==== 2. Uncomment the lines beginning with sudo python2.7 build-wxpython.py  ===
@@ -43,9 +44,9 @@ sudo add-apt-repository --remove "deb http://archive.ubuntu.com/ubuntu xenial ma
 #cd wxPython
 #echo "export PYTHONPATH="$PWD"" >> ~/.bashrc
 # sudo python2.7 build-wxpython.py --install --prefix=/home/$SUDO_USER/.virtualenvs/workspace/lib/ --reswig ###  Use this if you wish to use build-wxpython.py 
-
-cd ~/
 #deactivate
+cd ~/
+
 
 wget https://pypi.python.org/packages/dd/69/a6d5ba016f4e15a83e49471bcf91a7b8fbdf818e5acb002f554027d47650/TTFQuery-1.0.5.tar.gz
 tar -xvzf TTFQuery-1.0.5.tar.gz
