@@ -1,6 +1,7 @@
 # installer notes: Please read before using
 For future reference during installations ; currently only Visual Python <br> 
 Open the file in your favourite editor and check the three ways in which wxPython can be installed:<br>
+APT-GET IS ENABLED BY DEFAULT <br> 
 1. Via apt-get, this works on Xenial and Utopic, did not work for me when I was using Trusty <br>
 2. Building from source will involve either using build_wxpython.py or setup.py like in older versions <br>
 You may test and uncomment the version that works for you. Both work for me. Feel free to ask doubts if you wish.<br>
