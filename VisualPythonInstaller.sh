@@ -8,8 +8,6 @@
 sudo apt-get install libwxgtk3.0-dev
 sudo apt-get install virtualenv swig build-essential python-dev 
 cd ~/
-wget http://downloads.sourceforge.net/wxpython/wxPython-src-3.0.2.0.tar.bz2
-tar -xvjf wxPython-src-3.0.2.0.tar.bz2
 
 #=== SHELL SCRIPT TO FETCH VIA APT-GET =====
 sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu xenial main restricted universe"
@@ -21,8 +19,11 @@ sudo add-apt-repository --remove "deb http://archive.ubuntu.com/ubuntu xenial ma
 #=== SHELL SCRIPT TO BUILD FROM SOURCE ON VIRTUAL ENVIRONMENT ===
 # === Uncomment the lines below if the above does not work ==== 
 # === You have two choices === Either (PLEASE LEAVE ONE OF THESE OPTION COMMENTED )
-# ==== 1. Uncomment the lines beginning with ./configure and CFLAGS ===  
+# ==== 1. Uncomment the lines beginning with ./configure and CFLAGS === 
 
+
+#wget http://downloads.sourceforge.net/wxpython/wxPython-src-3.0.2.0.tar.bz2
+#tar -xvjf wxPython-src-3.0.2.0.tar.bz2 
 #source `which virtualenvwrapper.sh`
 #mkvirtualenv workspace	
 #cd wxPython-src-3.0.2.0/
@@ -37,6 +38,9 @@ sudo add-apt-repository --remove "deb http://archive.ubuntu.com/ubuntu xenial ma
 
 # ==== 2. Uncomment the lines beginning with sudo python2.7 build-wxpython.py  ===
 
+
+#wget http://downloads.sourceforge.net/wxpython/wxPython-src-3.0.2.0.tar.bz2
+#tar -xvjf wxPython-src-3.0.2.0.tar.bz2
 #source `which virtualenvwrapper.sh`
 #mkvirtualenv workspace	
 #cd wxPython-src-3.0.2.0/
