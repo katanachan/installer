@@ -1,4 +1,7 @@
 # installer notes: Please read before using
+<br> Run the following as superuser.
+<br> USAGE: $su 
+<br> bash VisualPythonInstaller.sh  
 For future reference during installations ; currently only Visual Python <br> 
 Open the file in your favourite editor and check the three ways in which wxPython can be installed:<br>
 APT-GET IS ENABLED BY DEFAULT <br> 

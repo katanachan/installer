@@ -10,10 +10,24 @@ sudo apt-get install virtualenv swig build-essential python-dev
 cd ~/
 
 #=== SHELL SCRIPT TO FETCH VIA APT-GET =====
-sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu xenial main restricted universe"
+OS_VERSION=`lsb_release --release | cut -f2`
+if [ "$OS_VERSION" == "16.04" ] 
+then
+	echo "In Xenial"
+else
+	sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu xenial main restricted universe"
+	echo "Adding Xenial to sources" 
+fi
 sudo apt-get update
 sudo apt-get install python-wxgtk3.0 python wxgtk3.0-dev
-sudo add-apt-repository --remove "deb http://archive.ubuntu.com/ubuntu xenial main restricted universe"
+if [ "$OS_VERSION" == "16.04" ] 
+then
+	echo "In Xenial"
+else
+	sudo add-apt-repository --remove "deb http://archive.ubuntu.com/ubuntu xenial main restricted universe"
+	echo "Removing Xenial from sources" 
+fi
+
 
 #=== SHELL SCRIPT TO BUILD FROM SOURCE ON VIRTUAL ENVIRONMENT ===
 # === Uncomment the lines below if the above does not work ==== 
